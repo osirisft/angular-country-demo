@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageComponent } from './components/message/message.component'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-country-demo';
+  title = 'Demo Basing on Angular';
 }

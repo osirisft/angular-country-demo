@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { MatTable, MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { CountryService } from '../../services/country-service';
+import { Country } from 'src/app/models/country';
 import { Countries } from '../../mock-data';
 
 @Component({
@@ -10,14 +12,21 @@ import { Countries } from '../../mock-data';
 })
 export class CountryListComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'capital'];
-  countryList = new MatTableDataSource(Countries);
+  displayedColumns: string[] = ['id', 'name', 'capital', 'region', 'nav'];
+  countryList: MatTableDataSource<Country>;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() { }
+  constructor(private countryService: CountryService) { }
 
   ngOnInit() {
+    this.getCountries();
+  }
 
-
+  getCountries(): void {
+    this.countryService.getCountries().subscribe(countries => {
+      this.countryList = new MatTableDataSource<Country>(countries);
+      this.countryList.paginator = this.paginator;
+    });
   }
 
   applyFilter(filterValue: string) {

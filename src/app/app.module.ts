@@ -6,18 +6,22 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 import { AppComponent } from './app.component';
 import { CountryListComponent } from './components/country-list/country-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CountryDetailComponent } from './components/country-detail/country-detail.component';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
-    CountryDetailComponent
+    CountryDetailComponent,
+    MessageComponent
   ],
   imports: [
     FormsModule,
@@ -27,7 +31,9 @@ import { CountryDetailComponent } from './components/country-detail/country-deta
     MatTableModule,
     MatFormFieldModule,
     MatTabsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
