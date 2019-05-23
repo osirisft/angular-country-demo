@@ -10,5 +10,7 @@ export class Country {
     gini: number;
     population: string;
     nativeName: string;
+    UTCOffset: string;
+    timezones: string[];
 
 }
