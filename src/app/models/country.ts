@@ -7,10 +7,11 @@ export class Country {
     currencies: Currency[];
     region: string;
     flag: string;
-    gini: number;
+    area: number;
     population: string;
     nativeName: string;
     UTCOffset: string;
     timezones: string[];
+    offsetTime: number;
 
 }

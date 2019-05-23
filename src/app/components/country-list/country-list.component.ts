@@ -28,15 +28,43 @@ export class CountryListComponent implements OnInit {
     this.countryService.getCountries().subscribe(countries => {
       for (let c of countries) {
         c.UTCOffset = (c.timezones && c.timezones.length > 0) ? c.timezones[0] : "";
+        c.offsetTime = this.getTimeFromUTCTimeZone(this.currentTime, c.UTCOffset);
       }
       this.countryList = new MatTableDataSource<Country>(countries);
       this.countryList.paginator = this.paginator;
+      this.countryList.sortingDataAccessor = (data: Country, sortHeaderId: string) => {
+        let objProperty = '';
+        switch (sortHeaderId) {
+          case 'id':
+            objProperty = data.alpha3Code;
+            break;
+          case 'name':
+            objProperty = data.name;
+            break;
+          case 'time':
+            objProperty = data.offsetTime.toString();
+            break;
+          case 'capital':
+            objProperty = data.capital;
+            break;
+          case 'region':
+            objProperty = data.region;
+            break;
+        }
+        return objProperty;
+      };
       this.countryList.sort = this.sort;
     });
   }
 
   applyFilter(filterValue: string) {
     this.countryList.filter = filterValue.trim().toLowerCase();
+  }
+
+  getTimeFromUTCTimeZone(currentLocalTime: Date, UTCOffset: string): number {
+    let timeFrom1970 = currentLocalTime.getTime();
+    let str = UTCOffset.replace('UTC', '').replace(':', '');
+    return parseInt(str) + timeFrom1970;
   }
 
 }
