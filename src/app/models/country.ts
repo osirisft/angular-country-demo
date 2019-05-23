@@ -4,7 +4,7 @@ export class Country {
     alpha3Code: string;
     name: string;
     capital: string;
-    currency: Currency;
+    currencies: Currency[];
     region: string;
     flag: string;
     gini: number;

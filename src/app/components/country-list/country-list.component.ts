@@ -3,7 +3,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { CountryService } from '../../services/country-service';
 import { Country } from 'src/app/models/country';
-import { Countries } from '../../mock-data';
 
 @Component({
   selector: 'app-country-list',

@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { CountryService } from '../../services/country-service';
 import { Country } from 'src/app/models/country';
+import { Currency } from 'src/app/models/currency';
+import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-country-detail',
@@ -12,6 +14,8 @@ import { Country } from 'src/app/models/country';
 export class CountryDetailComponent implements OnInit {
 
   country: Country = new Country();
+  currencyDisplayedColumns: string[] = ['code', 'name', 'symbol'];
+  currencies: MatTableDataSource<Currency>;
 
   constructor(
     private countryService: CountryService,
@@ -27,6 +31,7 @@ export class CountryDetailComponent implements OnInit {
   getCountry(id: string): void {
     this.countryService.getCountry(id).subscribe(country => {
       this.country = country;
+      this.currencies = new MatTableDataSource<Currency>(country.currencies);
     });
   }
 
