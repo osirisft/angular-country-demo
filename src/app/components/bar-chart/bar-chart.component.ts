@@ -20,9 +20,10 @@ export class BarChartComponent implements OnInit {
   public barChartLegend = true;
   public barChartPlugins = [];
 
-  public barChartData: ChartDataSets[] = [
-    { data: [], label: ' Top 10 Populated Countries' }
-  ];
+  // public barChartData: ChartDataSets[] = [
+  //   { data: [], label: 'Top 10 Populated Countries' }
+  // ];
+  public barChartData: ChartDataSets[] = [];
 
   public top10PopCountries: Country[];
 
@@ -44,9 +45,15 @@ export class BarChartComponent implements OnInit {
 
   updateBarChartLabel(countryList: Country[]) {
     this.barChartLabels = [];
+    this.barChartData = [];
+    let data = [];
     for (let i = 0; i < countryList.length; i++) {
       this.barChartLabels.push(countryList[i].name);
-      this.barChartData[0].data.push(parseInt(countryList[i].population));
+      data.push(parseInt(countryList[i].population));
     }
+    this.barChartData.push({
+      data: data,
+      label: 'Top 10 Populated Countries'
+    });
   }
 }
