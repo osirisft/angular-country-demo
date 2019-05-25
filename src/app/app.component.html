@@ -1,5 +1,47 @@
 <div class="center">
     <h1>{{title}}</h1>
 </div>
+
+<div>
+
+    <table>
+        <tr>
+            <td>
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <!-- <mat-card-title>Country List</mat-card-title> -->
+                    </mat-card-header>
+                    <a href="/list">
+                        <img mat-card-image src="../assets/outline_list_black_18dp.png">
+                    </a>
+                    <mat-card-content>
+                        <p>
+                            Country list
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </td>
+            <td>
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <!-- <mat-card-title>Country Statistic Information</mat-card-title> -->
+                    </mat-card-header>
+                    <a href="/barChart">
+                        <img mat-card-image src="../assets/outline_trending_up_black_18dp.png">
+                    </a>
+                    <mat-card-content>
+                        <p>
+                            Country Statistic Information(Bar Chart)
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
 <router-outlet></router-outlet>
 <!-- <app-message></app-message> -->

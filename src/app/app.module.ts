@@ -9,6 +9,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ChartsModule } from 'ng2-charts';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 import { AppComponent } from './app.component';
@@ -16,13 +19,15 @@ import { CountryListComponent } from './components/country-list/country-list.com
 import { AppRoutingModule } from './app-routing.module';
 import { CountryDetailComponent } from './components/country-detail/country-detail.component';
 import { MessageComponent } from './components/message/message.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
     CountryDetailComponent,
-    MessageComponent
+    MessageComponent,
+    BarChartComponent
   ],
   imports: [
     FormsModule,
@@ -35,7 +40,10 @@ import { MessageComponent } from './components/message/message.component';
     MatInputModule,
     HttpClientModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ChartsModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,11 @@
 .center {
   text-align: center;
 }
+.example-card {
+  width: 150px;
+  height: 300px;
+}
+
+.example-header-image {
+  background-size: cover;
+}

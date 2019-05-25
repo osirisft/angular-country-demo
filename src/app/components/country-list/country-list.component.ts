@@ -24,6 +24,10 @@ export class CountryListComponent implements OnInit {
     this.getCountries();
   }
 
+  refreshChart(): void {
+
+  }
+
   getCountries(): void {
     this.countryService.getCountries().subscribe(countries => {
       for (let c of countries) {
