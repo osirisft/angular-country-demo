@@ -7,5 +7,5 @@ import { MessageComponent } from './components/message/message.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Demo Basing on Angular';
+  title = 'Demo Basing on Angular 7';
 }
