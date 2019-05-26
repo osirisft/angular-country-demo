@@ -1,27 +1,13 @@
 # AngularCountryDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+## Introduction
+This project was implemented with Angular 7, Angular Material and chart.js. The REST API is fetched from https://restcountries.eu/.
 
-## Development server
+## Main Functions
+1. Show country list with pagination
+2. Show the results in real time as the user types the search terms
+3. Bar chart to show top 10 populated countries
+4. Sorting for each table column including current time for each country. As one country may contain multiple time zones, only the first time zone is shown
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
