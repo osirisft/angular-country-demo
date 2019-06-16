@@ -12,6 +12,9 @@ import { MatSortModule } from '@angular/material/sort';
 import { ChartsModule } from 'ng2-charts';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 import { AppComponent } from './app.component';
@@ -20,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CountryDetailComponent } from './components/country-detail/country-detail.component';
 import { MessageComponent } from './components/message/message.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { TreeListComponent } from './components/tree-list/tree-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     CountryListComponent,
     CountryDetailComponent,
     MessageComponent,
-    BarChartComponent
+    BarChartComponent,
+    TreeListComponent
   ],
   imports: [
     FormsModule,
@@ -43,7 +48,10 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     MatSortModule,
     ChartsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTreeModule,
+    MatIconModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

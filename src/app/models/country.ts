@@ -5,7 +5,6 @@ export class Country {
     name: string;
     capital: string;
     currencies: Currency[];
-    region: string;
     flag: string;
     area: number;
     population: string;
@@ -13,5 +12,7 @@ export class Country {
     UTCOffset: string;
     timezones: string[];
     offsetTime: number;
+    region: string;
+    subregion: string
 
 }
