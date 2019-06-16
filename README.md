@@ -6,8 +6,9 @@ This project was implemented with Angular 7, Angular Material and chart.js. The 
 ## Main Functions
 1. Show country list with pagination
 2. Show the results in real time as the user types the search terms
-3. Bar chart to show top 10 populated countries
-4. Sorting for each table column including current time for each country. As one country may contain multiple time zones, only the first time zone is shown
+3. Sorting for each table column including current time for each country. As one country may contain multiple time zones, only the first time zone is shown
+4. Dynamic tree structure display with lazy-loading
+5. Bar chart to show top 10 populated countries
 
 
 
